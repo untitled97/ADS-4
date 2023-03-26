@@ -36,12 +36,14 @@ int countPairs3(int *arr, int len, int value) {
             } else {
                 count++;
                 int bord_mid = middle - 1;
-                while (value == (*(arr + bord_mid) + *(arr + i)) && bord_mid > left) {
+                while (value == (*(arr + bord_mid) + *(arr + i))
+                       && bord_mid > left) {
                     count++;
                     bord_mid--;
                 }
-                int bord_mid = middle + 1;
-                while (value == (*(arr + bord_mid) + *(arr + i)) && bord_mid < right) {
+                bord_mid = middle + 1;
+                while (value == (*(arr + bord_mid) + *(arr + i))
+                       && bord_mid < right) {
                     count++;
                     bord_mid++;
                 }
